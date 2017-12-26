@@ -2,17 +2,17 @@ cmake_minimum_required(VERSION 2.8.3)
 
 include(cmake/HunterGate.cmake)
 HunterGate(
-    URL "https://github.com/lsolanka/hunter/archive/ros-hunter.tar.gz"
-    SHA1 "aad3832aebb5abf06ef22997e0a438f22ece4fbd"
+    URL "https://github.com/lsolanka/hunter/archive/v0.19.210-10.tar.gz"
+    SHA1 "0a67d853099e5c33d0e37bc8e19b41a2b05a2c50"
 )
 
 project(actionlib)
 
-hunter_add_package(common_msgs)
-hunter_add_package(message_generation)
-hunter_add_package(ros)
-hunter_add_package(ros_comm)
-hunter_add_package(std_msgs)
+hunter_add_package(ros-common_msgs)
+hunter_add_package(ros-message_generation)
+hunter_add_package(ros-ros)
+hunter_add_package(ros-ros_comm)
+hunter_add_package(ros-std_msgs)
 
 find_package(catkin REQUIRED COMPONENTS actionlib_msgs message_generation roscpp rosunit std_msgs)
 find_package(Boost CONFIG REQUIRED COMPONENTS thread)
